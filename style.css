@@ -1,4 +1,11 @@
 /* ===== Umum ===== */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -58,8 +65,18 @@ header nav a:hover {
   }
 }
 
+/* ===== Layanan Top Up ===== */
+#topup {
+  text-align: center;
+  padding: 40px;
+}
+.item-topup img {
+  height: 180px;
+  border-radius: 12px;
+}
+
 /* ===== Section Scroll Offset ===== */
-#promo, #layanan, #galeri, #jam, #kontak {
+#promo, #layanan, #galeri, #jam, #kontak, #topup {
   scroll-margin-top: 100px; /* tinggi header */
 }
 
@@ -81,6 +98,55 @@ table th, table td {
 table th {
   background-color: #009900;
   color: white;
+}
+
+/* ===== Top Up & Pulsa Section ===== */
+#topup {
+  text-align: center;
+  background-color: #e9fbe9;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+}
+
+.grid-topup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.item-topup {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-topup:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.item-topup img {
+  width: 100%;
+  border-radius: 10px;
+  height: 160px;
+  height: auto;        /* biar proporsional */
+  object-fit: contain;  /* biar seluruh gambar terlihat tanpa crop */
+  background-color: #f2f9f2; /* optional, supaya ada latar saat gambar lebih kecil */
+  padding: 5px;        /* optional, agar gambar tidak nempel ke tepi */
+}
+
+.item-topup h3 {
+  color: #006600;
+  margin-top: 15px;
+}
+
+.item-topup p {
+  color: #004400;
+  font-size: 15px;
 }
 
 
@@ -116,12 +182,15 @@ table th {
 }
 .item-galeri.banner {
   grid-column: 1 / -1; /* banner full width */
-  height: 250px;
+  height: auto; /* biar tinggi menyesuaikan gambar */
+  overflow: hidden;
+  border-radius: 10px;
 }
 .item-galeri.banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;  /* biar proporsional */
+  object-fit: contain;  /* biar seluruh gambar tampil tanpa terpotong */
+  display: block;
   border-radius: 10px;
 }
 .item-galeri {
@@ -185,6 +254,47 @@ table th {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+#affiliate .btn {
+  display: inline-block;
+  background-color: #ee4d2d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#affiliate .btn:hover {
+  background-color: #ff7043;
+}
+
+
+main, section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section {
+  margin-bottom: 60px;
+}
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ===== Efek Fade-in Tiap Section ===== */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* ===== Footer ===== */
 footer {
   text-align: center;
@@ -192,3 +302,87 @@ footer {
   background-color: #006600;
   color: white;
 }
+
+/* ===== RESPONSIVE UNTUK HP ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 5px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header nav a {
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  #promo ul {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  table th, table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .grid-galeri {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 15px;
+  }
+
+  .item-galeri.banner {
+    height: 180px;
+  }
+
+  .whatsapp-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whatsapp-btn {
+    width: 90%;
+    text-align: center;
+  }
+
+  #affiliate .btn {
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-galeri {
+    grid-template-columns: 1fr;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  header .logo {
+    height: 50px;
+  }
+}
+
+
+
