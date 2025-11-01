@@ -172,6 +172,7 @@
     <img src="logowm.png" class="logo" alt="Logo Fotocopy WM">
     <nav>
       <a href="#layanan">Layanan</a>
+      <a href="#topup">Top Up</a>
       <a href="#promo">Promo</a>
       <a href="#galeri">Galeri</a>
       <a href="#jam">Jam Operasional</a>
@@ -195,7 +196,7 @@
           <tr>
             <td>Fotocopy Hitam Putih</td>
             <td>Rp500 / lembar</td>
-            <td>Diskon untuk jumlah >100 lembar</td>
+            <td>Diskon untuk jumlah >50 lembar</td>
           </tr>
           <tr>
             <td>Print Warna</td>
@@ -203,13 +204,13 @@
             <td>Kualitas tinggi, hasil tajam</td>
           </tr>
           <tr>
-            <td>Jilid Biasa</td>
+            <td>Jilid </td>
             <td>Rp4.000 / buku</td>
-            <td>Jilid lakban</td>
+            <td>Jilid lakban + sampul</td>
           </tr>
           <tr>
             <td>Laminating</td>
-            <td>Rp5.000 / lembar</td>
+            <td>Rp5.000-7.000 / lembar</td>
             <td>Tersedia ukuran A4/F4, KTP & A3</td>
           </tr>
           <tr>
@@ -231,16 +232,47 @@
       </table>
     </section>
 
+    <!-- topup -->
+    <section id="topup">
+    <h2>💎 Layanan Top Up & Pulsa</h2>
+    <p>Kami menyediakan layanan cepat untuk pembelian pulsa, paket data, dan top up game online.</p>
+
+    <div class="grid-topup">
+     <div class="item-topup">
+      <img src="pulsa.jpg" alt="Pulsa & Paket Data">
+      <h3>Pulsa & Internet</h3>
+      <p>Tersedia semua operator: Telkomsel, XL, Indosat, Axis, Tri, dan lainnya.</p>
+    </div>
+
+    <div class="item-topup">
+      <img src="game.jpg" alt="Top Up Game">
+      <h3>Top Up Game</h3>
+      <p>Top up cepat untuk Free Fire, MLBB, PUBG, Genshin Impact, dan game lainnya.</p>
+    </div>
+
+    <div class="item-topup">
+      <img src="voucher.png" alt="Voucher & Layanan Digital">
+      <h3>Voucher Digital</h3>
+      <p>Steam, Google Play, Garena, dan lain-lain. Aman & langsung masuk!</p>
+    </div>
+  </div>
+
+  <div class="whatsapp-buttons">
+    <a href="https://wa.me/628xxxxxxx?text=Halo%20saya%20ingin%20topup" class="whatsapp-btn">💬 Pesan via WhatsApp</a>
+  </div>
+</section>
+
+
     <!-- Promo -->
     <section id="promo">
       <h2>🎉 Promo & Diskon Bulanan</h2>
       <ul>
-        <li>Fotocopy 100 lembar ke atas → Diskon 10%</li>
+        <li>Fotocopy 50 lembar ke atas → Diskon Rp450/Lembar (hemat hingga 10%)</li>
         <li>Print Warna 20 lembar ke atas → Diskon Rp2.000</li>
-        <li>Jilid Buku 3 pcs ke atas → Diskon 10%</li>
+        <li>Jilid Buku 2 pcs → Diskon Rp500 /Buku</li>
         <li>Service Kipas Angin kedua → Diskon Rp5.000</li>
       </ul>
-        <p><strong>Berlaku sampai akhir bulan berjalan</strong></p>
+        <p><strong>Berlaku sampai akhir bulan November berjalan</strong></p>
     </section>
 
     <!-- Galeri -->
@@ -248,8 +280,8 @@
       <h2>📸 Galeri Foto Usaha Fotocopy WM & ATK</h2>
       <div class="grid-galeri">
         <div class="item-galeri banner">
-          <img src="bannerutama.jpg" alt="Area Fotocopy & Print Warna">
-          <p>Area Fotocopy & Print Warna</p>
+          <img src="bannerutama.jpg" alt="Banner Utama">
+          <p>Banner Utama</p>
         </div>
         <div class="item-galeri">
           <img src="galeri1.jpg" alt="Jasa Pengetikan Dokumen">
@@ -265,6 +297,15 @@
         </div>
       </div>
     </section>
+
+    <section id="affiliate">
+     <h2>🛍️ Tonton Video Promo Shopee Kami — Koleksi Barang Praktis & Bermanfaat!</h2>
+     <p>Cek produk terbaik yang kami rekomendasikan lewat Shopee Video 👇</p>
+     <a href="https://id.shp.ee/ai8dmyj?smtt=0.0.9" target="_blank" class="btn">
+     Tonton Sekarang di Shopee
+     </a>
+   </section>
+
 
     <!-- Jam Operasional -->
     <section id="jam">
@@ -304,5 +345,21 @@
     }, { threshold: 0.2 });
     items.forEach(item => observer.observe(item));
   </script>
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const showSection = () => {
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        sec.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", showSection);
+  showSection(); // panggil saat halaman pertama kali dimuat
+</script>
+
 </body>
 </html>
