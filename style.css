@@ -221,6 +221,14 @@ table th {
   text-align: center;
 }
 
+.promo-shopee-img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
 
 /* ===== Animasi fade-in ===== */
@@ -383,6 +391,7 @@ footer {
     height: 50px;
   }
 }
+
 
 
 
