@@ -302,13 +302,13 @@ section {
 }
 
 .section-divider {
-  width: 90%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 1000px;
   height: 2px;
   background-color: #009900;
+  border-top: 2px solid #009900;
+  margin: 30px auto;
   opacity: 1;
-  margin: 40px auto;
-  border-radius: 2px;
 }
 
 section.visible {
@@ -405,6 +405,7 @@ footer {
     height: 50px;
   }
 }
+
 
 
 
