@@ -288,13 +288,27 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-
-
-/* ===== Efek Fade-in Tiap Section ===== */
 section {
+  padding: 40px 20px 20px;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Fade-in */
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-divider {
+  width: 90%;
+  max-width: 700px;
+  height: 2px;
+  background-color: #009900;
+  opacity: 0.4;
+  margin: 40px auto;
+  border-radius: 2px;
 }
 
 section.visible {
@@ -391,6 +405,7 @@ footer {
     height: 50px;
   }
 }
+
 
 
 
