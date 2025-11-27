@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muhammadmuhyiramadani-ship-it.github.io/fotocopywm/sitemap.xml
