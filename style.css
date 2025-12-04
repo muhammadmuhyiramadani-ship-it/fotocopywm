@@ -16,7 +16,7 @@ body {
 /* Judul */
 h2 {
   text-align: center;
-  color: #1E90FF;
+  color: #000000;
   margin-top: 40px;
   font-size: 28px;
 }
@@ -92,7 +92,7 @@ table {
 }
 /* ===== Tabel ===== */
 table th, table td {
-  border: 1px solid #1E90FF;
+  border: 1px solid #000000;
   padding: 10px;
   text-align: left;
   min-width: 120px;
@@ -170,7 +170,7 @@ table th {
 }
 #promo li:hover {
   background-color:  #003e99; /* background biru hover saat hover */
-  color: #66a3ff; /* teks lebih gelap */
+  color: #000000; /* teks lebih gelap */
   cursor: pointer; /* ganti kursor jadi pointer */
 }
 
@@ -408,6 +408,7 @@ footer {
     height: 50px;
   }
 }
+
 
 
 
