@@ -14,13 +14,13 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #0A1A2F; /* Biru gelap */
-  color: #ffffff; 
+  background-color: #0A1A2F;
+  color: #ffffff;
   line-height: 1.6;
 }
 
 /* ====================== */
-/* HEADER NAVIGATION */
+/* HEADER */
 /* ====================== */
 header {
   display: flex;
@@ -31,7 +31,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.4);
 }
 
 header .logo {
@@ -39,12 +39,11 @@ header .logo {
 }
 
 header nav a {
-  margin-left: 20px;
+  margin-left: 18px;
   color: #ffffff;
-  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color .3s;
 }
 
 header nav a:hover {
@@ -52,19 +51,17 @@ header nav a:hover {
 }
 
 /* ====================== */
-/* SECTION & TITLE */
-
-/* Semua Section */
+/* GENERAL SECTIONS */
+/* ====================== */
 section {
   max-width: 1200px;
   margin: 60px auto;
   padding: 20px;
   opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s ease;
+  transform: translateY(40px);
+  transition: opacity .7s ease, transform .7s ease;
 }
 
-/* Saat terlihat */
 section.visible {
   opacity: 1;
   transform: translateY(0);
@@ -79,12 +76,12 @@ h2 {
 }
 
 .section-divider {
-  width: 80%;
+  width: 85%;
   height: 3px;
+  margin: 35px auto;
   background: #00E5FF;
-  opacity: 0.4;
-  margin: 40px auto;
-  border-radius: 5px;
+  opacity: .4;
+  border-radius: 10px;
 }
 
 /* ====================== */
@@ -92,16 +89,16 @@ h2 {
 /* ====================== */
 table {
   width: 100%;
-  background: #062038;
   border-collapse: collapse;
-  overflow: hidden;
+  background: #062038;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 th {
   background: #005F8A;
-  color: white;
   padding: 14px;
+  color: #ffffff;
   text-align: left;
 }
 
@@ -111,17 +108,17 @@ td {
 }
 
 tr:hover {
-  background: #083255;
+  background-color: #083255;
 }
 
 /* ====================== */
-/* TOPUP CARD GRID */
+/* TOPUP CARDS */
 /* ====================== */
 .grid-topup {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  gap: 22px;
+  margin-top: 25px;
 }
 
 .item-topup {
@@ -130,8 +127,8 @@ tr:hover {
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
-  transition: 0.3s ease;
   text-align: center;
+  transition: transform .35s ease;
 }
 
 .item-topup:hover {
@@ -140,43 +137,32 @@ tr:hover {
 
 .item-topup img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
 }
 
 .item-topup h3 {
+  color: #0056a3;
   margin-top: 12px;
   font-size: 18px;
-  color: #003d80;
-}
-
-.item-topup p {
-  font-size: 14px;
-  color: #004c99;
 }
 
 /* ====================== */
-/* PROMO BOX */
+/* PROMO */
 /* ====================== */
-.promo-box {
-  background: #062038;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.35);
-}
-
-.promo-box h3 {
-  color: #00E5FF;
-  margin-bottom: 10px;
+.promo-box,
+#promo ul li {
+  font-size: 17px;
 }
 
 #promo ul {
-  margin-left: 20px;
+  padding: 15px;
+  list-style: disc;
 }
 
 #promo li:hover {
-  background: #003e99;
+  background-color: #003e99;
   cursor: pointer;
+  border-radius: 6px;
   padding-left: 5px;
 }
 
@@ -186,16 +172,16 @@ tr:hover {
 .grid-galeri {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .item-galeri {
+  opacity: 0;
   background: #001a36;
   border-radius: 10px;
   overflow: hidden;
   transform: scale(0.95);
-  opacity: 0;
-  transition: 0.5s;
+  transition: .45s;
 }
 
 .item-galeri.visible {
@@ -204,7 +190,7 @@ tr:hover {
 }
 
 .item-galeri:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .item-galeri img {
@@ -213,22 +199,51 @@ tr:hover {
 }
 
 /* ====================== */
-/* BUTTON */
+/* CTA BUTTON */
 /* ====================== */
-button, a.btn {
+button,
+a.btn {
+  display: inline-block;
   background: #007ACC;
   color: #ffffff;
   padding: 10px 18px;
-  font-weight: bold;
   border-radius: 8px;
-  border: none;
+  font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
+  border: none;
 }
 
-button:hover, a.btn:hover {
+button:hover,
+a.btn:hover {
   background: #009EEB;
   transform: translateY(-3px);
+}
+
+/* ====================== */
+/* WHATSAPP BUTTON */
+/* ====================== */
+.whatsapp-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
 }
 
 /* ====================== */
@@ -236,9 +251,20 @@ button:hover, a.btn:hover {
 /* ====================== */
 footer {
   background: #061526;
+  padding: 22px;
   text-align: center;
-  padding: 20px;
-  color: #ffffff;
+  font-size: 14px;
+  color: white;
+}
+
+/* ====================== */
+/* LINKS FIX */
+/* ====================== */ 
+a {
+  color: #00E5FF;
+}
+a:hover {
+  color: #7fdcff;
 }
 
 /* ====================== */
@@ -249,7 +275,29 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+
   header nav {
     margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .grid-galeri {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-galeri {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  header .logo {
+    height: 50px;
   }
 }
