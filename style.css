@@ -317,8 +317,15 @@ a:hover {
   }
 }
 
-/* Fix scroll anchor supaya tidak tertutup header */
+
+/* Offset scroll untuk anchor NAV */
 section {
-  scroll-margin-top: 100px; /* sesuaikan tinggi header */
+  scroll-margin-top: 150px; /* bisa disesuaikan */
 }
 
+/* Jika di HP header lebih tinggi */
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 180px;
+  }
+}
