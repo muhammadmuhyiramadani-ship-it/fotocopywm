@@ -198,6 +198,21 @@ tr:hover {
   height: auto;
 }
 
+
+/* Fix ukuran gambar Promo Shopee */
+.promo-shopee-img {
+  width: 100%;
+  max-width: 380px; /* atur sesuai selera, bisa 300–450px */
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 12px;
+}
+@media (max-width: 480px) {
+  .promo-shopee-img {
+    max-width: 280px;
+  }
+}
+
 /* ====================== */
 /* CTA BUTTON */
 /* ====================== */
@@ -301,3 +316,4 @@ a:hover {
     height: 50px;
   }
 }
+
