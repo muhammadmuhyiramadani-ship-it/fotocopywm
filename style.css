@@ -317,3 +317,8 @@ a:hover {
   }
 }
 
+/* Fix scroll anchor supaya tidak tertutup header */
+section {
+  scroll-margin-top: 100px; /* sesuaikan tinggi header */
+}
+
