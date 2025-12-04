@@ -198,6 +198,18 @@ tr:hover {
   height: auto;
 }
 
+.banner img {
+  width: 100vw;      /* selalu selebar layar */
+  max-width: none;   /* jangan dibatasi container */
+  height: 300px;     /* tinggi banner */
+  object-fit: cover; /* crop rapi */
+  object-position: center; /* fokus di tengah */
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%); /* biar benar-benar center */
+  border-radius: 0; /* hilangkan sudut rounded di banner */
+}
+
 
 /* Fix ukuran gambar Promo Shopee */
 .promo-shopee-img {
@@ -329,3 +341,4 @@ section {
     scroll-margin-top: 180px;
   }
 }
+
