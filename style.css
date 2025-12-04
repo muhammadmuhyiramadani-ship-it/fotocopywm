@@ -1,1388 +1,255 @@
-@@ -1,424 +1,95 @@
-
-
-/* ===== Umum ===== */
-
+/* ====================== */
+/*  THEME: BLUE PREMIUM   */
+/* ====================== */
 
 * {
-
-
   box-sizing: border-box;
-
-
+  margin: 0;
+  padding: 0;
 }
-
 
 html {
-
-
   scroll-behavior: smooth;
-
-
 }
-
-
-
-
-
-/* Tema Biru Gelap Premium */
 
 body {
-
   font-family: Arial, sans-serif;
-
-  margin: 0;
-
-
-  background-color: #87CEFA; /* light sky blue */
-
-
-  color: #1E90FF; /* Dodger Blue */
-
-
-  background-color: #0A1A2F; /* biru gelap */
-
-
-  color: #ffffff; /* teks default putih */
-
-  scroll-behavior: smooth;
-
+  background-color: #0A1A2F; /* Biru gelap */
+  color: #ffffff; 
+  line-height: 1.6;
 }
 
-
-/* Judul */
-
-
-h2 {
-
-
-  text-align: center;
-
-
-  color: #000000;
-
-
-  margin-top: 40px;
-
-
-  font-size: 28px;
-
-
-}
-
-
-p {
-
-
-  margin: 5px 0;
-
-
-}
-
-
-
-
-
-/* ===== Header ===== */
-
-
+/* ====================== */
+/* HEADER NAVIGATION */
+/* ====================== */
 header {
-
-
   display: flex;
-
-
   justify-content: space-between;
-
-
   align-items: center;
-
-
+  background: linear-gradient(90deg, #001f4d, #0066cc);
   padding: 15px 30px;
-
-
-  background: linear-gradient(90deg, #001f4d, #0077ff);
-
-
-  color: white;
-
-
   position: sticky;
-
-
   top: 0;
-
-
   z-index: 100;
-
-
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
-
 
 header .logo {
-
-
-  height: 80px;
-
-
+  height: 70px;
 }
-
 
 header nav a {
-
-
   margin-left: 20px;
-
-
-  color: white;
-
-
-  text-decoration: none;
-
-
+  color: #ffffff;
+  font-size: 16px;
   font-weight: bold;
-
-
-  transition: color 0.3s;
-
-
+  text-decoration: none;
+  transition: 0.3s;
 }
-
 
 header nav a:hover {
-
-
-  color: #b8d5ff;
-
-
+  color: #00E5FF;
 }
 
+/* ====================== */
+/* SECTION & TITLE */
 
-@media (max-width: 600px) {
-
-
-  header {
-
-
-    flex-direction: column;
-
-
-    align-items: flex-start;
-
-
-  }
-
-
-  header nav {
-
-
-    margin-top: 10px;
-
-
-  }
-
-
-  header nav a {
-
-
-    margin-left: 0;
-
-
-    margin-right: 15px;
-
-
-  }
-
-
-  header .logo {
-
-
-    height: 60px;
-
-
-  }
-
-
-}
-
-
-
-
-/* ===== Layanan Top Up ===== */
-
-
-#topup {
-
-
-  text-align: center;
-
-
-  padding: 40px;
-
-
-}
-
-
-.item-topup img {
-
-
-  height: 180px;
-
-
-  border-radius: 12px;
-
-
-}
-
-
-
-
-
-/* ===== Section Scroll Offset ===== */
-
-
-#promo, #layanan, #galeri, #jam, #kontak, #topup {
-
-
-  scroll-margin-top: 100px; /* tinggi header */
-
-
-}
-
-
-
-
-
-
-
-
-/* ===== Tabel Layanan ===== */
-
-
-table {
-
-
-  width: 100%;
-
-
-  border-collapse: collapse;
-
-
-  margin: 20px 0;
-
-
-  display: block;
-
-
-  overflow-x: auto;
-
-
-}
-
-
-/* ===== Tabel ===== */
-
-
-table th, table td {
-
-
-  border: 1px solid #000000;
-
-
-  padding: 10px;
-
-
-  text-align: left;
-
-
-  min-width: 120px;
-
-
-}
-
-
-table th {
-
-
-  background-color: #0047ab;
-
-
-  color: white;
-
-
-}
-
-
-
-
-
-/* ===== Top Up & Pulsa Section ===== */
-
-
-#topup {
-
-
-  text-align: center;
-
-
-  background-color: #001f4d; /* biru gelap */
-
-
-  padding: 40px 20px;
-
-
-  border-radius: 12px;
-
-
-  margin: 40px auto;
-
-
-}
-
-
-/* Section container */
-
-
+/* Semua Section */
 section {
-
-
-  padding: 50px 20px;
-
-
-  margin-bottom: 60px;
-
-
   max-width: 1200px;
-
-
-  margin-left: auto;
-
-
-  margin-right: auto;
-
-
-
-
-.grid-topup {
-
-
-  display: grid;
-
-
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-
-  gap: 25px;
-
-
-  margin-top: 30px;
-
-
+  margin: 60px auto;
+  padding: 20px;
   opacity: 0;
-
-
-  transform: translateY(40px);
-
-
-  transition: opacity 0.8s ease, transform 0.8s ease;
-
+  transform: translateY(30px);
+  transition: 0.8s ease;
 }
 
-
-
-
-.item-topup {
-
-
-  background: white;
-
-
-/* Card standar */
-
-
-.card {
-
-
-  background: #ffffff;
-
-
-  color: #000000;
-
-  border-radius: 12px;
-
-
-  padding: 15px;
-
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
-
-  transition: transform 0.3s, box-shadow 0.3s;
-
-
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
-
-
-  padding: 25px;
-
+/* Saat terlihat */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
-
-
-
-
-.item-topup:hover {
-
-
-  transform: translateY(-5px);
-
-
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-
-
-/* Heading section */
-
 
 h2 {
-
-
   text-align: center;
-
-
-  color: #00E5FF; /* cyan premium */
-
-
-  font-size: 28px;
-
-
+  font-size: 30px;
   margin-bottom: 25px;
-
+  color: #00E5FF;
+  font-weight: bold;
 }
-
-
-
-
-.item-topup img {
-
-
-  width: 100%;
-
-
-/* Divider antar section */
-
 
 .section-divider {
-
-
-  width: 90%;
-
-
-  max-width: 800px;
-
-
+  width: 80%;
   height: 3px;
-
-
-  background-color: #00E5FF;
-
-
-  opacity: 0.5;
-
-
-  margin: 50px auto;
-
-
-  border-radius: 3px;
-
-
+  background: #00E5FF;
+  opacity: 0.4;
+  margin: 40px auto;
+  border-radius: 5px;
 }
 
-
-
-
-
-/* Promo Bulanan */
-
-
-.promo-box {
-
-
+/* ====================== */
+/* TABLE STYLE */
+/* ====================== */
+table {
+  width: 100%;
   background: #062038;
-
-
-  padding: 25px;
-
+  border-collapse: collapse;
+  overflow: hidden;
   border-radius: 10px;
-
-
-  height: 160px;
-
-
-  height: auto;        /* biar proporsional */
-
-
-  object-fit: contain;  /* biar seluruh gambar terlihat tanpa crop */
-
-
-  background-color: #0047ab; /* optional, supaya ada latar saat gambar lebih kecil */
-
-
-  padding: 5px;        /* optional, agar gambar tidak nempel ke tepi */
-
-
 }
 
-
-
-
-
-.item-topup h3 {
-
-
-  color: #66a3ff; /* biru muda */
-
-
-  margin-top: 15px;
-
-
-  color: #ffffff;
-
+th {
+  background: #005F8A;
+  color: white;
+  padding: 14px;
+  text-align: left;
 }
 
-
-
-
-.item-topup p {
-
-
-  color: #b8d5ff;
-
-
-  font-size: 15px;
-
-
+td {
+  padding: 14px;
+  border-bottom: 1px solid #004766;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* ===== Promo ===== */
-
-
-#promo {
-
-
-  text-align: left; /* pastikan anak-anaknya kiri */
-
-
-.promo-box h3 {
-
-
-  color: #00E5FF;
-
+tr:hover {
+  background: #083255;
 }
 
-
-#promo ul {
-
-
-  list-style: disc;
-
-
-  padding: 20px;
-
-
-  max-width: 600px;
-
-
-  margin: 0;
-
-
-}
-
-
-#promo li {
-
-
-  padding: 10px 15px; /* 10px atas-bawah, 15px kiri-kanan */
-
-
-  font-size: 18px;
-
-
-  transition: background-color 0.3s, color 0.3s; /* animasi halus */
-
-
-}
-
-
-#promo li:hover {
-
-
-  background-color:  #003e99; /* background biru hover saat hover */
-
-
-  color: #000000; /* teks lebih gelap */
-
-
-  cursor: pointer; /* ganti kursor jadi pointer */
-
-
-}
-
-
-
-
-
-
-
-/* ===== Galeri ===== */
-
-
-.grid-galeri {
-
-
+/* ====================== */
+/* TOPUP CARD GRID */
+/* ====================== */
+.grid-topup {
   display: grid;
-
-
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-
-  gap: 20px;
-
-
-  margin: 30px 20px;
-
-
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
-
-
-.item-galeri.banner {
-
-
-  grid-column: 1 / -1; /* banner full width */
-
-
-  height: auto; /* biar tinggi menyesuaikan gambar */
-
-
-  overflow: hidden;
-
-
-  border-radius: 10px;
-
-
-}
-
-
-.item-galeri.banner img {
-
-
-  width: 100%;
-
-
-  height: auto;  /* biar proporsional */
-
-
-  object-fit: contain;  /* biar seluruh gambar tampil tanpa terpotong */
-
-
-  display: block;
-
-
-  border-radius: 10px;
-
-
-}
-
-
-.item-galeri {
-
-
-  overflow: hidden;
-
-
-  border-radius: 10px;
-
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 1s;
-
-
-  opacity: 0;
-
-
-}
-
-
-.item-galeri.visible {
-
-
-  opacity: 1;
-
-
-}
-
-
-.item-galeri img {
-
-
-  width: 100%;
-
-
-  display: block;
-
-
-/* Topup Item */
-
 
 .item-topup {
-
-
   background: #ffffff;
-
-
   color: #000000;
-
-  border-radius: 10px;
-
-
-  transition: transform 0.3s ease;
-
-
-}
-
-
-.item-galeri:hover img {
-
-
-  transform: scale(1.05);
-
-
-}
-
-
-.item-galeri:hover {
-
-
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-
-
-}
-
-
-.item-galeri p {
-
-
-  margin-top: 10px;
-
-
-  font-weight: 500;
-
-
-  color: #1E90FF;
-
-
-  text-align: center;
-
-
-}
-
-
-
-
-
-.promo-shopee-img {
-
-
-  width: 100%;
-
-
-  max-width: 450px;
-
-
-  display: block;
-
-
-  margin: 15px auto;
-
-
   border-radius: 12px;
-
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
-
+  padding: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+  text-align: center;
 }
 
-
-
-
-
-
-
-
-/* ===== Animasi fade-in ===== */
-
-
-@keyframes fadeIn {
-
-
-  to { opacity: 1; }
-
-
+.item-topup:hover {
+  transform: translateY(-6px);
 }
 
+.item-topup img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.item-topup h3 {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #003d80;
+}
+
+.item-topup p {
+  font-size: 14px;
+  color: #004c99;
+}
+
+/* ====================== */
+/* PROMO BOX */
+/* ====================== */
+.promo-box {
+  background: #062038;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.35);
+}
+
+.promo-box h3 {
+  color: #00E5FF;
+  margin-bottom: 10px;
+}
+
+#promo ul {
+  margin-left: 20px;
+}
+
+#promo li:hover {
+  background: #003e99;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+/* ====================== */
+/* GALLERY */
+/* ====================== */
+.grid-galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.item-galeri {
+  background: #001a36;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: 0.5s;
+}
 
 .item-galeri.visible {
-
-
-  animation: fadeIn 1s forwards;
-
-
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.25);
-
+  opacity: 1;
+  transform: scale(1);
 }
 
-
-
-
-/* ===== WhatsApp Buttons ===== */
-
-
-.whatsapp-buttons {
-
-
-  display: flex;
-
-
-  flex-wrap: wrap;
-
-
-  gap: 15px;
-
-
-  margin-top: 15px;
-
-
-  justify-content: center;
-
-
-}
-
-
-.whatsapp-btn {
-
-
-  background-color: #25d366;
-
-
-  color: white;
-
-
-  text-decoration: none;
-
-
-  padding: 10px 20px;
-
-
-  border-radius: 50px;
-
-
-  font-weight: bold;
-
-
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-
-
-}
-
-
-.whatsapp-btn:hover {
-
-
+.item-galeri:hover {
   transform: scale(1.05);
-
-
-  background-color: #1ebe5d;
-
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-
 }
 
+.item-galeri img {
+  width: 100%;
+  height: auto;
+}
 
-
-
-
-#affiliate .btn {
-
-
-  display: inline-block;
-
-
-  background-color: #ee4d2d;
-
-
-  color: white;
-
-
-  padding: 10px 20px;
-
-
-/* Tombol */
-
-
+/* ====================== */
+/* BUTTON */
+/* ====================== */
 button, a.btn {
-
-
   background: #007ACC;
-
-
-  color: #fff;
-
-
-  border: none;
-
-
+  color: #ffffff;
   padding: 10px 18px;
-
-  border-radius: 8px;
-
-
-  text-decoration: none;
-
   font-weight: bold;
-
-
+  border-radius: 8px;
+  border: none;
   text-decoration: none;
-
-
-  cursor: pointer;
-
   transition: 0.3s;
-
 }
-
-
-#affiliate .btn:hover {
-
-
-  background-color: #ff7043;
-
-
-}
-
-
-
-
-
-
-
-main, section {
-
-
-  max-width: 1200px;
-
-
-  margin: 0 auto;
-
-
-}
-
-
-section {
-
-
-  margin-bottom: 60px;
-
-
-}
-
-
-header {
-
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
-
-}
-
-
-
-
-
-section {
-
-
-  padding: 40px 20px 20px;
-
-
-  margin-bottom: 60px;
-
-
-  max-width: 1200px;
-
-
-  margin-left: auto;
-
-
-  margin-right: auto;
-
-
-
-
-
-  /* Fade-in */
-
-
-  opacity: 0;
-
-
-  transform: translateY(40px);
-
-
-  transition: opacity 0.8s ease, transform 0.8s ease;
-
 
 button:hover, a.btn:hover {
-
-
   background: #009EEB;
-
-
-  transform: translateY(-2px);
-
+  transform: translateY(-3px);
 }
 
-
-
-
-/* ===== Section Divider ===== */
-
-
-.section-divider {
-
-
-  width: 100%;
-
-
-  max-width: 1000px;
-
-
-  height: 2px;
-
-
-  background-color: #1E90FF;
-
-
-  border-top: 2px solid #1E90FF;
-
-
-  margin: 30px auto;
-
-
-  opacity: 1;
-
-
-}
-
-
-
-
-
-section.visible {
-
-
-  opacity: 1;
-
-
-  transform: translateY(0);
-
-
-}
-
-
-
-
-
-
-
-
-/* ===== Footer ===== */
-
-
-/* Footer */
-
+/* ====================== */
+/* FOOTER */
+/* ====================== */
 footer {
-
-
-  background-color: #061526;
-
-
-  color: #ffffff;
-
-
-  padding: 40px 20px;
-
+  background: #061526;
   text-align: center;
-
-
-  padding: 20px 10px;
-
-
-  background-color: #002a80;
-
-
-  color: white;
-
+  padding: 20px;
+  color: #ffffff;
 }
 
-
-
-
-
-/* ===== RESPONSIVE UNTUK HP ===== */
-
-
+/* ====================== */
+/* RESPONSIVE */
+/* ====================== */
 @media (max-width: 768px) {
-
-
-  body {
-
-
-    font-size: 16px;
-
-
-    line-height: 1.5;
-
-
-    padding: 0 5px;
-
-
-  }
-
-
-
-
-
-  h2 {
-
-
-    font-size: 22px;
-
-
-    margin-top: 30px;
-
-
-  }
-
-
-
-
-
   header {
-
-
     flex-direction: column;
-
-
-    align-items: center;
-
-
     text-align: center;
-
-
   }
-
-
-
-
-
   header nav {
-
-
-    display: flex;
-
-
-    flex-wrap: wrap;
-
-
-    justify-content: center;
-
-
-    gap: 10px;
-
-
+    margin-top: 12px;
   }
-
-
-
-
-
-  header nav a {
-
-
-    font-size: 16px;
-
-
-    margin: 5px;
-
-
-  }
-
-
-
-
-
-  #promo ul {
-
-
-    padding: 10px;
-
-
-    font-size: 16px;
-
-
-  }
-
-
-
-
-
-  table th, table td {
-
-
-    font-size: 14px;
-
-
-    padding: 8px;
-
-
-  }
-
-
-
-
-
-  .grid-galeri {
-
-
-    grid-template-columns: 1fr 1fr;
-
-
-    gap: 10px;
-
-
-    margin: 15px;
-
-
-  }
-
-
-
-
-
-  .item-galeri.banner {
-
-
-    height: 180px;
-
-
-  }
-
-
-
-
-
-  .whatsapp-buttons {
-
-
-    flex-direction: column;
-
-
-    align-items: center;
-
-
-  }
-
-
-
-
-
-  .whatsapp-btn {
-
-
-    width: 90%;
-
-
-    text-align: center;
-
-
-  }
-
-
-
-
-
-  #affiliate .btn {
-
-
-    display: block;
-
-
-    width: 90%;
-
-
-    text-align: center;
-
-
-    margin: 10px auto;
-
-
-  }
-
-
-}
-
-
-
-
-
-@media (max-width: 480px) {
-
-
-  .grid-galeri {
-
-
-    grid-template-columns: 1fr;
-
-
-  }
-
-
-  h2 {
-
-
-    font-size: 20px;
-
-
-  }
-
-
-  header .logo {
-
-
-    height: 50px;
-
-
-  }
-
-
 }
