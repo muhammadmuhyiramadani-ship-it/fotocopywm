@@ -105,7 +105,7 @@ table th {
 /* ===== Top Up & Pulsa Section ===== */
 #topup {
   text-align: center;
-  background-color: #e9fbe9;
+  background-color: #001f4d; /* biru gelap */
   padding: 40px 20px;
   border-radius: 12px;
   margin: 40px auto;
@@ -137,17 +137,17 @@ table th {
   height: 160px;
   height: auto;        /* biar proporsional */
   object-fit: contain;  /* biar seluruh gambar terlihat tanpa crop */
-  background-color: #f2f9f2; /* optional, supaya ada latar saat gambar lebih kecil */
+  background-color: #0047ab; /* optional, supaya ada latar saat gambar lebih kecil */
   padding: 5px;        /* optional, agar gambar tidak nempel ke tepi */
 }
 
 .item-topup h3 {
-  color: #006600;
+  color: #66a3ff; /* biru muda */
   margin-top: 15px;
 }
 
 .item-topup p {
-  color: #004400;
+  color: #b8d5ff;
   font-size: 15px;
 }
 
@@ -169,8 +169,8 @@ table th {
   transition: background-color 0.3s, color 0.3s; /* animasi halus */
 }
 #promo li:hover {
-  background-color: #e0ffe0; /* background hijau muda saat hover */
-  color: #006600; /* teks lebih gelap */
+  background-color:  #003e99; /* background biru hover saat hover */
+  color: #66a3ff; /* teks lebih gelap */
   cursor: pointer; /* ganti kursor jadi pointer */
 }
 
@@ -408,6 +408,7 @@ footer {
     height: 50px;
   }
 }
+
 
 
 
