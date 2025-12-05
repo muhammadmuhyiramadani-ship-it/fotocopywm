@@ -210,6 +210,17 @@ tr:hover {
   border-radius: 0; /* hilangkan sudut rounded di banner */
 }
 
+.banner-atk img { /* Gambar atk */
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.35);
+  object-fit: cover;
+}
+
+
 
 /* Fix ukuran gambar Promo Shopee */
 .promo-shopee-img {
@@ -341,4 +352,5 @@ section {
     scroll-margin-top: 180px;
   }
 }
+
 
