@@ -312,45 +312,26 @@ a:hover {
   header {
     flex-direction: column;
     text-align: center;
-  }
-
-  header nav {
-    margin-top: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .grid-galeri {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-galeri {
-    grid-template-columns: 1fr;
-  }
-
-  h2 {
-    font-size: 24px;
+    padding: 10px 5px;
   }
 
   header .logo {
-    height: 50px;
+    height: 55px;
+    margin-bottom: 8px;
+  }
+
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px; /* Jarak horizontal & vertikal */
+  }
+
+  header nav a {
+    font-size: 14px;
+    margin: 0;
+    padding: 3px 5px;
+    white-space: nowrap; /* Biar kata tidak terpotong */
   }
 }
-
-
-/* Offset scroll untuk anchor NAV */
-section {
-  scroll-margin-top: 150px; /* bisa disesuaikan */
-}
-
-/* Jika di HP header lebih tinggi */
-@media (max-width: 768px) {
-  section {
-    scroll-margin-top: 180px;
-  }
-}
-
-
