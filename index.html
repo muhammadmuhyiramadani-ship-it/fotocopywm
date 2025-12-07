@@ -267,8 +267,23 @@
   showSection(); // panggil saat halaman pertama kali dimuat
 </script>
 
+  <script>
+  function setScrollOffset() {
+    const headerHeight = document.querySelector('header').offsetHeight;
+    document.documentElement.style.setProperty('--scroll-offset', headerHeight + 20 + "px");
+
+    document.querySelectorAll("section").forEach(sec => {
+      sec.style.scrollMarginTop = "var(--scroll-offset)";
+    });
+  }
+
+  // Jalankan saat load & saat resize (misalnya layar rotate)
+  window.addEventListener("load", setScrollOffset);
+  window.addEventListener("resize", setScrollOffset);
+</script>
 </body>
 </html>
+
 
 
 
