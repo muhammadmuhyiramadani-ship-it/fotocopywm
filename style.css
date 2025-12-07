@@ -339,11 +339,6 @@ a:hover {
 /* SCROLL OFFSET FIX */
 /* ====================== */
 
-/* Default (PC) */
-section {
-  scroll-margin-top: 180px; /* Naikin supaya judul pasti keliatan */
-}
-
 /* Tablet / Mobile besar */
 @media (max-width: 1024px) {
   section {
@@ -365,3 +360,4 @@ section {
   }
 }
 }
+
